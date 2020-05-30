@@ -1,3 +1,61 @@
 <template>
-  <h1>${message}</h1>
+  <div class="ui container">
+
+     <section class="ui raised segment">
+        <h3 class="ui headder">Cayman Beaches</h3>
+     </section>
+
+    <div class="ui basic segment">
+      <div class="ui stackable two column grid">
+        <div class="column">
+          <form class="ui form stacked segment">
+            <h3>Add a New Beach</h3>
+                <form action="/beach" method="POST">
+                <div class="ui form">
+
+                <div class="field" >
+                <label>Name of Beach</label>
+          <input type="text" name="name">
+                </div>
+              <div class="field" >
+               <label>Location</label>
+                <input type="text" name="location" placeholder="Latitudie and Longitude">
+                 </div>
+              <div class="field">
+               <label>Description</label>
+               <textarea name="description" rows="2" placeholder="Max 50 words" maxlength="200"></textarea>
+        </div>
+        <div class="field" >
+          <label>Category</label>
+          <select multiple="" name= "categories" class="ui dropdown">
+            <option value="Swimming">Swimming</option>
+            <option value="Sun Bathing">Sun Bathing</option>
+            <option value="Snorkeling">Snorkeling</option>
+            <option value="Water Sports">Water Sports</option>
+            <option value="Dining">Dining</option>
+            <option value="Family Friendly">Family Friendly</option>
+            <option value="Dog Friendly">Dog Friendly</option>
+          </select>
+        </div>
+                  <button class="ui yellow submit button">Add</button>
+                </div>
+                </form>
+          </form>
+                </div>
+        <div class="column">
+          <h4 class="ui dividing header">Beaches</h4>
+          <table class="ui celled table segment">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Activities</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
