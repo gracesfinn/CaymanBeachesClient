@@ -1,0 +1,16 @@
+<template>
+
+<form submit.trigger="addBeach()" class="ui form stacked segment">
+  <h3 class="ui dividing header">Add a New Beach</h3>
+  <div class="field" >
+    <label>Name of Beach</label> <input value.bind="name">
+  </div>
+  <div class="field" >
+    <label>Location</label> <input  value.bind="location">
+  </div>
+  <div class="field">
+    <label>Activities</label> <input  value.bind="activities">
+  </div>
+  <button class="ui yellow submit button">Add</button>
+</form>
+</template>
