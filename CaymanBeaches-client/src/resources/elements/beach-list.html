@@ -1,0 +1,26 @@
+<template>
+  <h4 class="ui dividing header">Beaches</h4>
+  <table class="ui celled table segment">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Activities</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr repeat.for="beach of beaches">
+      <td>
+        ${beach.name}
+      </td>
+
+      <td>
+        ${beach.location}
+      </td>
+      <td>
+        ${beach.activities}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</template>
