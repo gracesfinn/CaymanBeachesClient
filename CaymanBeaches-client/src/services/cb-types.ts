@@ -7,5 +7,6 @@ export interface Beach {
 export interface CheckInModel{
   groupSize: number;
   method: string;
+  beach: Beach;
 
 }

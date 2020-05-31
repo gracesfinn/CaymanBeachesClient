@@ -4,15 +4,26 @@
   <div class="ui stackable two column grid">
     <div class="column">
       <form submit.trigger="newCheckIn()" class="ui form stacked segment">
+        <h3 class="ui dividing header"> Select Beach </h3>
+        <div class="grouped inline fields">
+          <div class="field" repeat.for="beach of beaches">
+            <div class="ui radio checkbox">
+              <input type="radio" model.bind="beach" checked.bind="selectedBeach">
+              <label>${beach.name}</label>
+            </div>
+          </div>
         <h3 class="ui dividing header">Check-In</h3>
         <div class="grouped inline fields">
           <div class="field"><label>Group Size</label> <input type="number" value.bind="groupSize" /></div>
         </div>
+          <h3 class="ui dividing header">Comment</h3>
         <div class="field" repeat.for="method of paymentMethods">
+
           <div class="ui radio checkbox">
             <input type="radio" model.bind="method" checked.bind="selectedMethod">
             <label>${method}</label>
           </div>
+        </div>
         </div>
 
         <button class="ui blue submit button">Check In</button>
@@ -24,12 +35,14 @@
       <table class="ui celled table segment">
         <thead>
         <tr>
+          <th>Beach</th>
           <th>Group Size</th>
           <th>Comment</th>
         </tr>
         </thead>
         <tbody>
         <tr repeat.for="checkIn of checkIns">
+          <td>${checkIn.beach.name}</td>
           <td> ${checkIn.groupSize}</td>
           <td> ${checkIn.method}</td>
         </tr>
