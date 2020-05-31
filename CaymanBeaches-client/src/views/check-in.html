@@ -1,28 +1,19 @@
 <template>
+
+  <require from="../resources/elements/check-in-list"></require>
+  <require from="../resources/elements/check-in-form"></require>
+
   <div class="ui stackable two column grid">
+
     <div class="column">
-      <form submit.trigger="newCheckIn()" class="ui form stacked segment">
-        <h3 class="ui dividing header">Check In</h3>
-        <div class="grouped inline fields">
-          <div class="field"><label>Group Size</label> <input type="number" value.bind="groupSize" /></div>
-        </div>
-        <button class="ui blue submit button">Check In</button>
-      </form>
+          <check-in-form checkIns.bind="checkIns" payment-methods.bind="paymentMethods"></check-in-form>
+
     </div>
-    <div class="column">
-    <h3 class="ui dividing header"> Check-Ins to Date </h3>
-    <table class="ui celled table segment">
-      <thead>
-      <tr>
-        <th>Group Size</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr repeat.for="checkIn of checkIns">
-        <td> ${checkIn}</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-  </div>
+      <div class="column">
+        <check-in-list checkIns.bind="checkIns"></check-in-list>
+      </div>
+     </div>
+
 </template>
+
+

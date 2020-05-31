@@ -1,15 +1,15 @@
 <template>
 
-  <require from="views/beaches"></require>
-  <require from="views/check-in"></require>
+  <require from="resources/elements/nav-bar.html"></require>
+
 
   <div class="ui container">
     <section class="ui raised segment">
-      <h3 class="ui headder">Cayman Beaches</h3>
+      <h3 class="ui header"> Cayman Beaches </h3>
     </section>
+    <nav-bar router.bind="router"></nav-bar>
     <div class="ui basic segment">
-      <check-in></check-in>
-      <beaches></beaches>
+      <router-view></router-view>
     </div>
   </div>
 </template>

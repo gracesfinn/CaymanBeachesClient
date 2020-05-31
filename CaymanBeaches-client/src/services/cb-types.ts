@@ -3,3 +3,9 @@ export interface Beach {
   location: string;
   activities: string;
 }
+
+export interface CheckInModel{
+  groupSize: number;
+  method: string;
+
+}

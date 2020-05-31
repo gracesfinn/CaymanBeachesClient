@@ -1,9 +1,8 @@
-export class CheckIn{
-  groupSize = '0';
-  checkIns: number[] = [];
+import { CheckInModel} from "../services/cb-types";
 
-  newCheckIn(){
-    this.checkIns.push(parseInt(this.groupSize));
-    console.log(this.checkIns)
-  }
+export class CheckIn {
+
+  checkIns: CheckInModel [] = [];
+  paymentMethods= ['Very Busy','Busy', 'Quiet'];
+
 }
