@@ -10,3 +10,11 @@ export interface CheckInModel{
   beach: Beach;
 
 }
+
+export interface User {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+}
+

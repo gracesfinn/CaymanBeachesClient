@@ -16,19 +16,14 @@ export class CheckIn {
   selectedMethod = '';
   selectedBeach : Beach = null;
 
-  newCheckIn(){
-    const checkIn={
-      groupSize: parseInt(this.groupSize),
-      method:this.selectedMethod,
-      beach: this.selectedBeach
-    };
-    this.checkIns.push(checkIn);
-    console.log(this.checkIns)
-  }
-
 
   constructor(private bs:BeachService) {
    this.beaches = bs.beaches;
+   this.checkIns = bs.checkIns;
+   this.paymentMethods = bs.paymentMethods;
+  }
+  newCheckIn(){
+    this.bs.checkIn(parseInt(this.groupSize), this.selectedMethod, this.selectedBeach);
   }
 
 }
