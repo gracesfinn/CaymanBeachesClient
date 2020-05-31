@@ -1,8 +1,6 @@
 import {bindable} from 'aurelia-framework';
 
-
-
-export class CheckInList{
+export class CheckInsList{
   @bindable
   checkIns : number[];
 }

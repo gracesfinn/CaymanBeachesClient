@@ -1,7 +1,52 @@
 <template>
 
-  <require from="../resources/elements/check-in-list"></require>
-  <require from="../resources/elements/check-in-form"></require>
+
+  <div class="ui stackable two column grid">
+    <div class="column">
+      <form submit.trigger="newCheckIn()" class="ui form stacked segment">
+        <h3 class="ui dividing header">Check-In</h3>
+        <div class="grouped inline fields">
+          <div class="field"><label>Group Size</label> <input type="number" value.bind="groupSize" /></div>
+        </div>
+        <div class="field" repeat.for="method of paymentMethods">
+          <div class="ui radio checkbox">
+            <input type="radio" model.bind="method" checked.bind="selectedMethod">
+            <label>${method}</label>
+          </div>
+        </div>
+
+        <button class="ui blue submit button">Check In</button>
+      </form>
+    </div>
+    <div class="column">
+
+      <h3 class="ui dividing header"> Check-ins to date </h3>
+      <table class="ui celled table segment">
+        <thead>
+        <tr>
+          <th>Group Size</th>
+          <th>Comment</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr repeat.for="checkIn of checkIns">
+          <td> ${checkIn.groupSize}</td>
+          <td> ${checkIn.method}</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+
+
+</template>
+
+
+<!--
+
+
 
   <div class="ui stackable two column grid">
 
@@ -13,7 +58,4 @@
         <check-in-list checkIns.bind="checkIns"></check-in-list>
       </div>
      </div>
-
-</template>
-
-
+-->

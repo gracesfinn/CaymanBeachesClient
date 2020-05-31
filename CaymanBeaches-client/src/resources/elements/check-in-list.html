@@ -1,17 +1,17 @@
 <template>
   <div class="ui stacked segment">
-    <h3 class="ui dividing header"> Check-Ins to Date </h3>
-<table class="ui celled table segment">
-  <thead>
-  <tr>
-    <th>Group Size</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr repeat.for="checkIn of checkIns">
-    <td> ${checkIn}</td>
-  </tr>
-  </tbody>
-</table>
-</div>
+  <h3 class="ui dividing header"> Check-ins to date </h3>
+  <table class="ui celled table segment">
+    <thead>
+    <tr>
+      <th>Group Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr repeat.for="checkIn of checkIns">
+      <td> ${checkIn}</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
 </template>
