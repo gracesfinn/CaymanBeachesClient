@@ -16,5 +16,12 @@
     "lastName": "Simpson",
     "email": "bart@simpson.com",
     "password": "secret"
+  },
+  {
+    "firstName": "Grace",
+    "lastName": "Finnerty",
+    "email": "grace@finnerty,
+    "password": "hi"
   }
+
 ]
